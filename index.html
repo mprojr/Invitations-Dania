@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anahis Invitations - Custom Quinceañera & Sweet 16 Invitations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Language Selection Popup -->
+    <div id="langPopup" class="lang-popup-overlay">
+        <div class="lang-popup">
+            <div class="lang-popup-logo">Anahis Invitations</div>
+            <h2>Welcome · Bienvenidos</h2>
+            <p>Please select your language<br>Por favor selecciona tu idioma</p>
+            <div class="lang-popup-buttons">
+                <button id="btnEnglish" class="lang-popup-btn">English</button>
+                <button id="btnEspanol" class="lang-popup-btn">Español</button>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <h1 class="logo">Anahis Invitations</h1>
+            <nav>
+                <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
+                <a href="#reserve" data-i18n="nav.reserve">Reserve Now</a>
+                <a href="#about" data-i18n="nav.about">About</a>
+                <div class="lang-toggle" role="group" aria-label="Language toggle">
+                    <button class="lang-option" data-lang="en">EN</button>
+                    <button class="lang-option" data-lang="es">ES</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2 data-i18n="hero.title">Elegant Digital Invitations</h2>
+            <p data-i18n="hero.subtitle">Custom designs for your Quinceañera or Sweet 16</p>
+            <a href="#reserve" class="btn-primary" data-i18n="hero.btn">Reserve Your Spot</a>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 data-i18n="portfolio.title">Our Work</h2>
+            <p class="subtitle" data-i18n="portfolio.subtitle">Beautiful, interactive digital invitations</p>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <div class="placeholder-img">
+                        <span data-i18n="portfolio.item1.label">Quinceañera Design</span>
+                    </div>
+                    <p data-i18n="portfolio.item1.desc">Elegant floral design with interactive elements</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder-img">
+                        <span data-i18n="portfolio.item2.label">Sweet 16 Design</span>
+                    </div>
+                    <p data-i18n="portfolio.item2.desc">Modern design with countdown timer</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder-img">
+                        <span data-i18n="portfolio.item3.label">Classic Quinceañera</span>
+                    </div>
+                    <p data-i18n="portfolio.item3.desc">Traditional style with RSVP integration</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 data-i18n="features.title">What You Get</h2>
+            <div class="features">
+                <div class="feature">
+                    <h3 data-i18n="feature1.title">✨ Custom Design</h3>
+                    <p data-i18n="feature1.desc">Personalized invitation matching your event theme and colors</p>
+                </div>
+                <div class="feature">
+                    <h3 data-i18n="feature2.title">📱 Interactive Elements</h3>
+                    <p data-i18n="feature2.desc">RSVP links, location maps, music player, and countdown timer</p>
+                </div>
+                <div class="feature">
+                    <h3 data-i18n="feature3.title">💫 Easy Sharing</h3>
+                    <p data-i18n="feature3.desc">Digital format perfect for WhatsApp, email, and social media</p>
+                </div>
+                <div class="feature">
+                    <h3 data-i18n="feature4.title">⚡ Quick Turnaround</h3>
+                    <p data-i18n="feature4.desc">Professional designs delivered digitally</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reserve" class="reservation">
+        <div class="container">
+            <h2 data-i18n="reservation.title">Reserve Your Custom Invitation</h2>
+            <p class="subtitle" data-i18n="reservation.subtitle">Fill out the form below and I'll reach out as soon as I'm ready to take your order!</p>
+
+            <form id="reservationForm">
+                <div class="form-group">
+                    <label for="customerName" data-i18n="form.name">Your Name *</label>
+                    <input type="text" id="customerName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" data-i18n="form.email">Email *</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone" data-i18n="form.phone">Phone (WhatsApp) *</label>
+                    <input type="tel" id="phone" required placeholder="+1 (555) 123-4567">
+                </div>
+
+                <div class="form-group">
+                    <label for="eventType" data-i18n="form.eventType">Event Type *</label>
+                    <select id="eventType" required>
+                        <option value="" data-i18n="form.eventType.placeholder">Select event type</option>
+                        <option value="quinceanera" data-i18n="form.eventType.quinceanera">Quinceañera</option>
+                        <option value="sweet16" data-i18n="form.eventType.sweet16">Sweet 16</option>
+                        <option value="other" data-i18n="form.eventType.other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="honoreeName" data-i18n="form.honoreeName">Honoree's Name *</label>
+                    <input type="text" id="honoreeName" required data-i18n-placeholder="form.honoreeName.placeholder" placeholder="e.g., Jasmine Del Rio">
+                </div>
+
+                <div class="form-group">
+                    <label for="eventDate" data-i18n="form.eventDate">Event Date *</label>
+                    <input type="date" id="eventDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="colorScheme" data-i18n="form.colors">Preferred Colors</label>
+                    <input type="text" id="colorScheme" data-i18n-placeholder="form.colors.placeholder" placeholder="e.g., Gold, mauve, and pink">
+                </div>
+
+                <div class="form-group">
+                    <label for="details" data-i18n="form.details">Additional Details</label>
+                    <textarea id="details" rows="4" data-i18n-placeholder="form.details.placeholder" placeholder="Tell us about your vision, theme, style preferences, etc."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="inspiration" data-i18n="form.inspiration">Inspiration Images/Links</label>
+                    <textarea id="inspiration" rows="2" data-i18n-placeholder="form.inspiration.placeholder" placeholder="Paste links to Pinterest, Instagram, or describe designs you like"></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary" data-i18n="form.submit">Submit Reservation</button>
+            </form>
+
+            <div id="successMessage" class="success-message" style="display: none;">
+                <h3 data-i18n="success.title">✨ Reservation Submitted!</h3>
+                <p data-i18n="success.msg">We've received your request and will review it shortly. You'll hear from us within 24-48 hours via email or WhatsApp.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p data-i18n="footer.copyright">© 2026 Anahis Invitations. All rights reserved.</p>
+            <p><a href="admin.html">Admin Login</a></p>
+        </div>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
