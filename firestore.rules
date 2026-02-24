@@ -1,0 +1,17 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Anyone can submit a reservation
+    match /reservations/{docId} {
+      allow create: if request.resource.data.keys().hasAll([
+        'customerName', 'email', 'phone', 'eventType',
+        'honoreeName', 'eventDate', 'status'
+      ]);
+
+      // Only authenticated admin can read or update
+      allow read, update, delete: if request.auth != null;
+    }
+  }
+}
